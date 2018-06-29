@@ -9,7 +9,7 @@ Tecnologias utilizadas no projeto
 
 - [Node.js](https://nodejs.org/en/)
 - [Express.js](https://expressjs.com/)
-- [Pug}(https://pugjs.org/api/getting-started.html)
+- [Pug](https://pugjs.org/api/getting-started.html)
 
 ## Instalação
 
