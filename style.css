@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One|Roboto');
+body {
+  background-color: #D6EFFF;
+  color: #006494;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+  text-align:center;
+}
+h1 {
+  color: #DC493A;
+  font-family: 'Bowlby One', cursive;
+  font-size: 4em;
+}
+section {
+  margin: 0px auto;
+  max-width: 600px;
+}
+.description {
+  font-style: italic;
+}
+footer {
+  color: #262626;
+  font-size: 0.8em;
+}
+
+@media screen and (max-device-width: 767px) {
+    h1 {
+        font-size: 2em;
+    }
+}

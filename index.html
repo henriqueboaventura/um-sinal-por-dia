@@ -1,0 +1,68 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>1 Sinal por dia</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header><h1>1 sinal por dia!</h1></header>
+
+        <section id="signal-container" style='display: none'>
+          <h2>Palavra: <strong id="signal-word"></strong></h2>
+          <p id="signal-description" class="description"></p>
+
+          <video id="signal-video" autoplay loop muted controls>
+            <p>
+              Para ver o video por favor habilite JavaScript e considere atualizar para um navegador que suporte
+              <a href="http://videojs.com/html5-video-support/" target="_blank">Video HTML 5</a>.
+            </p>
+          </video>
+        </section>
+        <section id="signal-loading-container" style='display: block'>
+          <h2>Carregando</h2>
+        </section>
+
+        <footer>
+          <p>Baseado nas informações disponibilizadas em <a href="http://www.acessibilidadebrasil.org.br/libras_3/" target="_blank" title="Link para o site acessibilidade Brasil">Acessibilidade Brasil</a>.</p>
+        </footer>
+
+        <script type="text/javascript">
+          function renderRandomSignal() {
+            const NUM_SIGNALS = 5823
+            const id = Math.floor(Math.random() * (NUM_SIGNALS - 1) + 1);
+            renderSignal(id)
+          }
+
+          function renderSignal(id) {
+            fetch(`data/signals/${id}.json`)
+              .then(res => res.json())
+              .then(render)
+          }
+
+          function render(signal) {
+            const containerEl = document.getElementById("signal-container")
+            const loadingEl = document.getElementById("signal-loading-container")
+            const wordEl = document.getElementById("signal-word")
+            const descriptionEl = document.getElementById("signal-description")
+            const videoEl = document.getElementById("signal-video")
+            const url = 'http://www.acessibilidadebrasil.org.br/libras_3/public/media/palavras/videos/' + signal.video
+
+            containerEl.style.display = 'block'
+            loadingEl.style.display = 'none'
+            videoEl.src = url;
+            wordEl.textContent = signal.palavra
+            descriptionEl.textContent = signal.acepcao
+          }
+
+          window.onload = _ => {
+            setTimeout(renderRandomSignal.bind(renderRandomSignal), 1000)
+          }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "name": "um-sinal-por-dia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "download-signals": "./bin/cli.js download-signals",
+    "split-signals": "./bin/cli.js split-signals"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kidh0/um-sinal-por-dia.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kidh0/um-sinal-por-dia/issues"
+  },
+  "homepage": "https://github.com/kidh0/um-sinal-por-dia#readme",
+  "devDependencies": {
+    "commander": "^2.16.0",
+    "gh-pages": "^1.2.0"
+  },
+  "dependencies": {
+    "debug": "^3.1.0",
+    "mkdirp": "^0.5.1",
+    "node-fetch": "^2.1.2"
+  }
+}

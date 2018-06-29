@@ -1,0 +1,15 @@
+{
+    "id": "1000",
+    "palavra": "CABER-NÃO",
+    "acepcao": "Não é de sua competência; você não pode fazer isso.",
+    "exemplo": "Não cabe a você pegar biscoito em cima do armário.",
+    "video": "caber_naoSm_Prog001.mp4",
+    "libras": "ARMÁRIO CIMA VOCÊ NÃO-CABER PEGAR BISCOITO.",
+    "img": "caber_naoSm_Prog001.jpg",
+    "assunto": "1",
+    "assunto_title": "NENHUM",
+    "classe": "LOC.VERB.",
+    "url": "cg32.jpg",
+    "origem": "nacional",
+    "mao": "cg32.jpg"
+}
