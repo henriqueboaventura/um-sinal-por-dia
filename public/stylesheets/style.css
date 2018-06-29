@@ -22,3 +22,9 @@ footer {
   color: #262626;
   font-size: 0.8em;
 }
+
+@media screen and (max-device-width: 767px) {
+    h1 {
+        font-size: 2em;
+    }
+}
