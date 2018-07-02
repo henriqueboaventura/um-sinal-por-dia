@@ -37,6 +37,15 @@ program
   })
 
 program
+  .command('signal-movie <id>')
+  .description('Download specific signal movie')
+  .action(id => {
+    debug('Running signal CLI')
+    api.getSignalMovie(id)
+      .then(buffer => console.log(Buffer.from(buffer).toString('utf-8')))
+  })
+
+program
   .command('download-signals')
   .option('-o, --output <output>', 'Output File', 'data/signals.json')
   .description('Download all signals')
