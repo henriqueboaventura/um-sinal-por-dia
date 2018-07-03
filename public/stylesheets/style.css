@@ -46,6 +46,7 @@ footer {
 
 @media screen and (max-device-width: 767px) {
     h1 {
-        font-size: 2em;
+        font-size: 1.7em;
+        width: 93%;
     }
 }
