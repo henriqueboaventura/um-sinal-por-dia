@@ -5,7 +5,6 @@ var request = require('request');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   signalId = Math.floor(Math.random() * (5823 - 1) + 1);
-  console.log("request: 'http://www.acessibilidadebrasil.org.br/libras_3/ajax/getWordById/" + signalId + "'");
   request('http://www.acessibilidadebrasil.org.br/libras_3/ajax/getWordById/' + signalId, function (error, response, body) {
     var content = JSON.parse(body);
     console.log(content.data)
