@@ -36,6 +36,18 @@ video {
   box-shadow: 0 0 10px 2px #00000030;
 }
 
+.button {
+    background-color: #16A085;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-bottom: 50px;
+    border-radius: 3px;
+}
+
 footer {
     color: #2C3E50;
     font-size: 0.8em;
