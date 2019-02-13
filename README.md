@@ -3,6 +3,8 @@
 Uma maneira simples e fácil de aprender vocabulário em libras.
 Baseado nas informações fornecidas pelo site [Acessibilidade Brasil](http://www.acessibilidadebrasil.org.br).
 
+O site está atualmente no heroku e pode ser acessado através da URL [https://um-sinal-por-dia.herokuapp.com/](https://um-sinal-por-dia.herokuapp.com/)
+
 ## Pré requisitos
 
 Tecnologias utilizadas no projeto
