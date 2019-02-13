@@ -7,22 +7,20 @@ Baseado nas informações fornecidas pelo site [Acessibilidade Brasil](http://ww
 
 Tecnologias utilizadas no projeto
 
-- [Node.js](https://nodejs.org/en/)
-- [Express.js](https://expressjs.com/)
-- [Pug](https://pugjs.org/api/getting-started.html)
+- [React.js](https://reactjs.org/)
 
 ## Instalação
 
-Faça um clone do repositório:
+Faça clone do repositório:
 
 ```sh
-git clone https://github.com/kidh0/um-sinal-por-dia.git    
+git clone https://github.com/kidh0/um-sinal-por-dia.git
 ```
 
 Instale as dependências:
 
 ```sh
-cd um-sinal-por-dia && npm install
+cd um-sinal-por-dia && yarn install
 ```
 
 ## Executando
@@ -30,5 +28,5 @@ cd um-sinal-por-dia && npm install
 Inicie o servidor:
 
 ```sh
-DEBUG=um-sinal-por-dia:* npm start
+yarn start
 ```
