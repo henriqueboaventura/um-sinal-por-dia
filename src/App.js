@@ -44,22 +44,6 @@ class App extends Component {
           <p>Baseado nas informações disponibilizadas em <a href="http://www.acessibilidadebrasil.org.br/libras_3/">Acessibilidade Brasil.</a></p>
         </footer>
       </div>
-      // <div className="App">
-      //   <header className="App-header">
-      //     <img src={logo} className="App-logo" alt="logo" />
-      //     <p>
-      //       Edit <code>src/App.js</code> and save to reload.
-      //     </p>
-      //     <a
-      //       className="App-link"
-      //       href="https://reactjs.org"
-      //       target="_blank"
-      //       rel="noopener noreferrer"
-      //     >
-      //       Learn React
-      //     </a>
-      //   </header>
-      // </div>
     );
   }
 }
