@@ -1,51 +1,36 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Video from './components/Video';
-const signs = require('./data.json');
+import { getRandomVideo } from './utils/VideoUtils';
+import { VIDEO_BASE_URL } from './constants';
 
-class App extends Component {
-  state = {
-    word: "",
-    description: "",
-    video: ""
+const App = () => {
+  const [videoInfo, setVideoInfo] = useState({ word: '', description: '', video: '' });
+  const { word, description, video } = videoInfo;
+
+  const loadNewSign = () => {
+    const data = getRandomVideo();
+    setVideoInfo({ ...data });
   }
 
-  componentDidMount() {
-    this.loadNewSign();
-  }
+  useEffect(() => loadNewSign(), []);
 
-  loadNewSign() {
-    let data = signs.data[Math.floor(Math.random() * (5823 - 1) + 1)]
-    this.setState({
-      word: data.w,
-      description: data.d,
-      video: `http://www.acessibilidadebrasil.org.br/libras_3/public/media/palavras/videos/${data.v}`
-    })
-  }
-
-  handleLoadNewSign = () => {
-    this.loadNewSign()
-  }
-
-  render() {
-    const { word, description, video } = this.state;
-    return (
-      <div className="App">
-        <header>
-          <h1>1 sinal por dia!</h1>
-        </header>
-        <section>
-          <h2>Palavra: <strong>{word}</strong></h2>
-          <p className="description">{description}</p>
-          <Video url={video} />
-        </section>
-        <button onClick={this.handleLoadNewSign} className="button">Próxima Palavra</button>
-        <footer>
-          <p>Baseado nas informações disponibilizadas em <a href="http://www.acessibilidadebrasil.org.br/libras_3/">Acessibilidade Brasil.</a></p>
-        </footer>
-      </div>
-    );
-  }
+  return (
+    <div className="App">
+      <header>
+        <h1>1 sinal por dia!</h1>
+      </header>
+      <section>
+        <h2>Palavra: <strong>{word}</strong></h2>
+        <p className="description">{description}</p>
+        <Video url={video} />
+      </section>
+      <button onClick={loadNewSign} className="button">Próxima Palavra</button>
+      <footer>
+        <p>Baseado nas informações disponibilizadas em <a href={VIDEO_BASE_URL}>Acessibilidade Brasil.</a></p>
+      </footer>
+    </div>
+  );
 }
 
 export default App;
