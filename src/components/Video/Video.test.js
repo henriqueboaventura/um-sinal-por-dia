@@ -16,7 +16,7 @@ describe('Video', () => {
 
   it('sets video props', () => {
     const wrapper = shallow(<Video {...defaultProps} />);
-    const video = wrapper.find('video');
+    const video = wrapper.find('[data-test="video"]');
     expect(video.exists()).toBeTruthy();
     expect(video.prop('autoPlay')).toBeTruthy();
     expect(video.prop('className')).toBe(`video ${defaultProps.className}`);
