@@ -5,6 +5,8 @@ Baseado nas informações fornecidas pelo site [Acessibilidade Brasil](http://ww
 
 O site está atualmente no heroku e pode ser acessado através da URL [https://um-sinal-por-dia.herokuapp.com/](https://um-sinal-por-dia.herokuapp.com/)
 
+[![Build Status](https://travis-ci.org/kidh0/um-sinal-por-dia.svg?branch=master)](https://travis-ci.org/kidh0/um-sinal-por-dia)
+
 ## Pré requisitos
 
 Tecnologias utilizadas no projeto
