@@ -4,6 +4,7 @@ import Video from '.';
 
 describe('Video', () => {
   const defaultProps = {
+    className: 'testClassName',
     url: 'test'
   };
 
@@ -14,18 +15,19 @@ describe('Video', () => {
   });
 
   it('sets video props', () => {
-      const wrapper = shallow(<Video {...defaultProps} />);
-      const video = wrapper.find('video');
-      expect(video.exists()).toBeTruthy();
-      expect(video.prop('autoPlay')).toBeTruthy();
-      expect(video.prop('controls')).toBeTruthy();
-      expect(video.prop('loop')).toBe('loop');
-      expect(video.prop('muted')).toBeTruthy();
+    const wrapper = shallow(<Video {...defaultProps} />);
+    const video = wrapper.find('video');
+    expect(video.exists()).toBeTruthy();
+    expect(video.prop('autoPlay')).toBeTruthy();
+    expect(video.prop('className')).toBe(`video ${defaultProps.className}`);
+    expect(video.prop('controls')).toBeTruthy();
+    expect(video.prop('loop')).toBe('loop');
+    expect(video.prop('muted')).toBeTruthy();
   });
 
   it('sets source props', () => {
-      const wrapper = shallow(<Video {...defaultProps} />);
-      const source = wrapper.find('source');
-      expect(source.prop('src')).toBe(defaultProps.url);
+    const wrapper = shallow(<Video {...defaultProps} />);
+    const source = wrapper.find('source');
+    expect(source.prop('src')).toBe(defaultProps.url);
   });
 });
