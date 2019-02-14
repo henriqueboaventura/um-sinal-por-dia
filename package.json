@@ -12,7 +12,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "./node_modules/eslint/bin/eslint.js src/**/*.js"
+    "lint": "eslint src/**/*.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -28,7 +28,6 @@
     "enzyme-adapter-react-16": "^1.9.1",
     "enzyme-to-json": "^3.3.5",
     "prop-types": "^15.7.2",
-    "eslint": "^5",
     "eslint-plugin-react": "^7.12.4"
   },
   "jest": {
