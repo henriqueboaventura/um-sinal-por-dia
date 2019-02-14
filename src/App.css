@@ -30,12 +30,6 @@ section {
     font-weight: 300;
 }
 
-video {
-    width: 60%;
-    margin: 2rem 0;
-    box-shadow: 0 0 10px 2px #00000030;
-}
-
 .button {
     background-color: #16A085;
     color: white;
@@ -47,6 +41,11 @@ video {
     margin-bottom: 50px;
     border-radius: 3px;
     border:none;
+}
+
+.videoContainer {
+    margin: 2rem 0;
+    width: 60%;
 }
 
 footer {

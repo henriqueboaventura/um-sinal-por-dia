@@ -8,10 +8,7 @@ const App = () => {
   const [videoInfo, setVideoInfo] = useState({ word: '', description: '', video: '' });
   const { word, description, video } = videoInfo;
 
-  const loadNewSign = () => {
-    const data = getRandomVideo();
-    setVideoInfo({ ...data });
-  }
+  const loadNewSign = () => setVideoInfo({ ...getRandomVideo() });
 
   useEffect(() => loadNewSign(), []);
 
@@ -23,7 +20,7 @@ const App = () => {
       <section>
         <h2>Palavra: <strong>{word}</strong></h2>
         <p className="description">{description}</p>
-        <Video url={video} />
+        <Video className="videoContainer" url={video} />
       </section>
       <button onClick={loadNewSign} className="button">Próxima Palavra</button>
       <footer>
